@@ -1,4 +1,4 @@
-name: 'C++ CI'
+name: testing_example
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on:  
     permissions: write-all
     steps:
       - uses: actions/checkout@v3
@@ -40,3 +40,4 @@ jobs:
           asset_path: ./helloworld-0.0.${{ github.run_number }}-Linux.deb
           asset_name: helloworld-0.0.${{ github.run_number }}-Linux.deb
           asset_content_type: application/vnd.debian.binary-package
+      
